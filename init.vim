@@ -20,6 +20,7 @@ set hlsearch
 set statusline+=%{get(b:,'gitsigns_status','')}
 
 lua require('plugins')
+lua require('gopls')
 lua require('plugin-config/nvim-treesitter')
 lua require('plugin-config/feline')
 lua require('plugin-config/gitsigns')
@@ -41,6 +42,8 @@ require'lspconfig'.clangd.setup{}
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.rust_analyzer.setup{}
 EOF
+
+let g:loaded_python_provider = 0
 
 lua <<EOF
   -- Setup nvim-cmp.
