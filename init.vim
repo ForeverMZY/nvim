@@ -29,7 +29,6 @@ lua require('plugin-config/nvim-tree')
 lua require('plugin-config/todo-comments')
 lua require('plugin-config/nvim-autopairs')
 
-let g:onedark_style = 'cool'
 colorscheme onedark
 
 imap kj <esc>
