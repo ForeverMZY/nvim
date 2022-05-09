@@ -1,9 +1,13 @@
 return require('packer').startup(function()
-    use 'ojroques/vim-oscyank'
-
     use 'wbthomason/packer.nvim'
 
+	use 'bfrg/vim-cpp-modern'
+
+    use 'ojroques/vim-oscyank'
+
 	use "lukas-reineke/indent-blankline.nvim"
+
+	use 'folke/tokyonight.nvim'
 
 	use 'famiu/feline.nvim'
 

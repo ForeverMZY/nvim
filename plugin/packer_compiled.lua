@@ -194,10 +194,20 @@ _G.packer_plugins = {
     path = "/home/mzy/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
     url = "https://github.com/folke/todo-comments.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/mzy/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   ultisnips = {
     loaded = true,
     path = "/home/mzy/.local/share/nvim/site/pack/packer/start/ultisnips",
     url = "https://github.com/SirVer/ultisnips"
+  },
+  ["vim-cpp-modern"] = {
+    loaded = true,
+    path = "/home/mzy/.local/share/nvim/site/pack/packer/start/vim-cpp-modern",
+    url = "https://github.com/bfrg/vim-cpp-modern"
   },
   ["vim-lsp-cxx-highlight"] = {
     loaded = true,
@@ -222,5 +232,6 @@ if should_profile then save_profiles() end
 end)
 
 if not no_errors then
+  error_msg = error_msg:gsub('"', '\\"')
   vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your config for correctness" | echohl None')
 end
