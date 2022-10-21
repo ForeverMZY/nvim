@@ -12,6 +12,9 @@ return require('packer').startup(function()
 	use 'famiu/feline.nvim'
 
 	use 'neovim/nvim-lspconfig'
+	use 'simrat39/rust-tools.nvim'
+	use 'nvim-lua/plenary.nvim'
+	use 'mfussenegger/nvim-dap'
 
 	use 'windwp/nvim-autopairs'
 
@@ -72,5 +75,6 @@ return require('packer').startup(function()
 
 	use 'dcampos/nvim-snippy'
 	use 'dcampos/cmp-snippy'
+
 end)
 
