@@ -45,7 +45,9 @@ let g:cpp_member_highlight = 1
 let g:cpp_simple_highlight = 1
 
 imap kj <esc>
-vnoremap <leader>c :OSCYank<CR>
+nmap <leader>c <Plug>OSCYankOperator
+nmap <leader>cc <leader>c_
+vmap <leader>c <Plug>OSCYankVisual
 
 set mouse=a
 
@@ -170,6 +172,7 @@ let g:nvim_tree_window_picker_exclude = {
 " indicates to the window picker that the buffer's window should not be
 " selectable.
 let g:nvim_tree_special_files = { 'README.md': 1, 'Makefile': 1, 'MAKEFILE': 1 } " List of filenames that gets highlighted with NvimTreeSpecialFile
+let g:nvim_tree_ignore = {}
 
 "If 0, do not show the icons for one of 'git' 'folder' and 'files'
 "1 by default, notice that if 'files' is 1, it will only display
