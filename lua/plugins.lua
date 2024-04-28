@@ -19,11 +19,6 @@ return require('packer').startup(function()
 	use 'windwp/nvim-autopairs'
 
 	use {
-		"folke/todo-comments.nvim",
-		requires = "nvim-lua/plenary.nvim",
-	}
-
-	use {
 		'lewis6991/gitsigns.nvim',
 		requires = {
 			'nvim-lua/plenary.nvim'
@@ -44,8 +39,6 @@ return require('packer').startup(function()
 		requires = "nvim-lua/plenary.nvim",
 	}
 	
-	use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
-
 	use 'jackguo380/vim-lsp-cxx-highlight'
 
 	use {
@@ -75,6 +68,19 @@ return require('packer').startup(function()
 
 	use 'dcampos/nvim-snippy'
 	use 'dcampos/cmp-snippy'
+
+	use({
+	  "jackMort/ChatGPT.nvim",
+		config = function()
+		  require("chatgpt").setup()
+		end,
+		requires = {
+		  "MunifTanjim/nui.nvim",
+		  "nvim-lua/plenary.nvim",
+		  "folke/trouble.nvim",
+		  "nvim-telescope/telescope.nvim"
+		}
+	})
 
 end)
 
