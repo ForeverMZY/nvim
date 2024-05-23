@@ -1,4 +1,6 @@
 return require('packer').startup(function()
+	use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+
     use 'wbthomason/packer.nvim'
 
 	use 'bfrg/vim-cpp-modern'

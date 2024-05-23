@@ -28,6 +28,20 @@ lua require('plugin-config/nvim-tree')
 lua require('plugin-config/todo-comments')
 lua require('plugin-config/nvim-autopairs')
 
+" In your init.lua or init.vim
+set termguicolors
+lua << EOF
+require("bufferline").setup{}
+EOF
+
+lua << EOF
+local home = vim.fn.expand("$HOME")
+require("chatgpt").setup({
+	welcome_message = 'Welcome to ChatGPT.nvim',
+    api_key_cmd = "gpg --decrypt " .. home .. "/openai_api.key"
+})
+EOF
+
 colorscheme tokyonight
 
 " Disable function highlighting (affects both C and C++ files)
