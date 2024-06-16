@@ -34,13 +34,13 @@ lua << EOF
 require("bufferline").setup{}
 EOF
 
-lua << EOF
-local home = vim.fn.expand("$HOME")
-require("chatgpt").setup({
-	welcome_message = 'Welcome to ChatGPT.nvim',
-    api_key_cmd = "gpg --decrypt " .. home .. "/openai_api.key"
-})
-EOF
+" lua << EOF
+" local home = vim.fn.expand("$HOME")
+" require("chatgpt").setup({
+" 	welcome_message = 'Welcome to ChatGPT.nvim',
+"     api_key_cmd = "gpg --decrypt " .. home .. "/openai_api.key"
+" })
+" EOF
 
 colorscheme tokyonight
 

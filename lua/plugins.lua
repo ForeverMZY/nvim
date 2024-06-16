@@ -1,3 +1,10 @@
+vim.cmd [[
+  augroup AnsiEscAuto
+    autocmd!
+    autocmd BufReadPost *.log :AnsiEsc
+  augroup END
+]]
+
 return require('packer').startup(function()
 	use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 
@@ -71,18 +78,20 @@ return require('packer').startup(function()
 	use 'dcampos/nvim-snippy'
 	use 'dcampos/cmp-snippy'
 
-	use({
-	  "jackMort/ChatGPT.nvim",
-		config = function()
-		  require("chatgpt").setup()
-		end,
-		requires = {
-		  "MunifTanjim/nui.nvim",
-		  "nvim-lua/plenary.nvim",
-		  "folke/trouble.nvim",
-		  "nvim-telescope/telescope.nvim"
-		}
-	})
+	-- use({
+	--   "jackMort/ChatGPT.nvim",
+	-- 	config = function()
+	-- 	  require("chatgpt").setup()
+	-- 	end,
+	-- 	requires = {
+	-- 	  "MunifTanjim/nui.nvim",
+	-- 	  "nvim-lua/plenary.nvim",
+	-- 	  "folke/trouble.nvim",
+	-- 	  "nvim-telescope/telescope.nvim"
+	-- 	}
+	-- })
+
+	use 'powerman/vim-plugin-AnsiEsc'
 
 end)
 
